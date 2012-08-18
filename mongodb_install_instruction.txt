@@ -1,0 +1,27 @@
+How to install MongoDB on Ubuntu 11.10 ?
+--------------------------------------------------------------------------------
+
+
+MongoDB can be installed in the following way
+
+1	$ sudo vi /etc/apt/sources.list
+	
+	then inside /etc/apt/sources.list, append the following line
+
+2	deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+
+Now add the GPG key and update your package list:
+
+3	$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+4	$ sudo apt-get update
+
+Now we can install mongoid db in the following way
+5	sudo apt-get install mongodb-10gen
+
+Now you can check whether mongoDB got installed in a proper way:
+6	$ mongo
+7	   MongoDB shell version: 2.0.7
+8	   connecting to: test
+
+From your browser also, you can hit the url mentioned below and check whether mongoDB got installed properly.
+9	http://localhost:28017/
